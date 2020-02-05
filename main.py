@@ -60,7 +60,7 @@ def image_a_b_gen(batch_size):
 
 # Train model
 tensorboard = TensorBoard(log_dir="output/first_run")
-model.fit_generator(image_a_b_gen(batch_size), callbacks=[tensorboard], epochs=1, steps_per_epoch=1000)
+model.fit_generator(image_a_b_gen(batch_size), callbacks=[tensorboard], epochs=30, steps_per_epoch=200)
 
 # Save model
 model_json = model.to_json()
